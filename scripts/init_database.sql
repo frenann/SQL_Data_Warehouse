@@ -2,7 +2,7 @@
 
 Esse script tem como função criar o Banco de Dados 'DataWareHouse' e três schemas dentro dele: 'bronze', 'silver' e 'gold'.
 
-/*
+*/
 
 
 -- Criando o Banco de Dados 'DataWareHouse':
