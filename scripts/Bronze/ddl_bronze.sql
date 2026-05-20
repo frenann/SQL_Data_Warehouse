@@ -3,7 +3,8 @@
 Esse script tem como função criar seis tabelas dentro do Banco de Dados 'DataWareHouse'.
 A nomenclatura adotada na criação das tabelas apresenta primeiramente a camada dos dados: 'bronze'. Em seguida, o nome apresenta a fonte dos dados: 'crm' ou 'erp' junto do nome exato dessa fonte. 
 Exemplo: bronze.crm_cust_info, apresenta informações sobre os clientes obtidas da plataforma CRM.
-/*
+
+*/
 
 -- Criação da tabela com informação dos Clientes:
 
