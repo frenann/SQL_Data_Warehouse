@@ -26,12 +26,13 @@ dwh_create_date DATETIME2 DEFAULT GETDATE()
 
 CREATE TABLE silver.crm_prd_info (
 prd_id INT,
+cat_id NVARCHAR(40),
 prd_key NVARCHAR(40),
 prd_nm NVARCHAR(40),
 prd_cost INT,
 prd_line NVARCHAR(40),
-prd_start_dt DATETIME,
-prd_end_dt DATETIME,
+prd_start_dt DATE,
+prd_end_dt DATE,
 dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 
