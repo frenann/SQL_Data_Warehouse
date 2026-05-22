@@ -31,7 +31,7 @@ END cst_marital_status, -- Altera o estado civil dos clientes para Single 'Solte
 CASE WHEN UPPER(TRIM(cst_gndr)) = 'F' THEN 'Female'
 	 WHEN UPPER(TRIM(cst_gndr)) = 'M' THEN 'Male'
 	 ELSE 'N/A'
-END cst_gndr, -- Altera o gênero dos clientes para Female 'Feminino' e Male 'Masculino'. Além disso,  Além disso, adiciona o termo N/A no lugar do NULL.
+END cst_gndr, -- Altera o gênero dos clientes para Female 'Feminino' e Male 'Masculino'. Além disso, adiciona o termo N/A no lugar do NULL.
 cst_create_date
 FROM (
 SELECT *,
@@ -121,7 +121,7 @@ END bdate,
 CASE WHEN UPPER(TRIM(gen)) IN ('F', 'FEMALE') THEN 'Female'
 	 WHEN UPPER(TRIM(gen)) IN ('M', 'MALE') THEN 'Male'
 	 ELSE 'N/A'
-END gen -- -- Altera o gênero dos clientes para Female 'Feminino' e Male 'Masculino'. Além disso,  Além disso, adiciona o termo N/A no lugar do NULL.
+END gen -- -- Altera o gênero dos clientes para Female 'Feminino' e Male 'Masculino'. Além disso, adiciona o termo N/A no lugar do NULL.
 FROM bronze.erp_cust_az12
 
 
