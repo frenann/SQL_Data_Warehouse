@@ -102,3 +102,26 @@ CASE WHEN sls_price = 0 OR sls_price IS NULL THEN sls_sales / NULLIF(sls_quantit
 	 ELSE sls_price 
 END sls_price
 FROM bronze.crm_sales_details
+
+
+
+
+INSERT INTO silver.erp_cust_az12 (
+cid,
+bdate,
+gen
+)
+SELECT
+CASE WHEN cid LIKE 'NAS%' THEN SUBSTRING(cid, 4, LEN(cid)) -- Extrai todos os caracteres da coluna 'cid' a partir do quarto. 
+	 ELSE cid
+END cid,
+CASE WHEN bdate > GETDATE() THEN NULL -- Altera as datas de nascimento 'bdate' no "futuro" para valores nulos.
+	 ELSE bdate
+END bdate,	
+CASE WHEN UPPER(TRIM(gen)) IN ('F', 'FEMALE') THEN 'Female'
+	 WHEN UPPER(TRIM(gen)) IN ('M', 'MALE') THEN 'Male'
+	 ELSE 'N/A'
+END gen -- -- Altera o gênero dos clientes para Female 'Feminino' e Male 'Masculino'. Além disso,  Além disso, adiciona o termo N/A no lugar do NULL.
+FROM bronze.erp_cust_az12
+
+
