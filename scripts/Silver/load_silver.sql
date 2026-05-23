@@ -3,45 +3,49 @@
 - A função UPPER converte todos os caracteres da string para maiúsculos.
 - A função ROW_NUMBER foi utilizada para selecionar os registros mais recentes dos clientes e dessa forma, remover os duplicados. 
 */
-
+/* 
+- O comando TRUNCATE é utilizado antes do insert para evitar que a tabela contenha informações indesejadas ou que as informações sejam inseridas de forma duplicada.
+- Os comandos TRY e CATCH são utilizados para lidar com erros que possam acontecer durante a execução do código. O código CATCH apenas é utilizado caso ocorra um erro no comando TRY, sendo assim uma alternativa.
+*/
 
 -- Para tratar os dados da camada Bronze e inserir na Silver:
 
 -- Carregando os dados na tabela silver.crm_cust_info:
 
-
-INSERT INTO silver.crm_cust_info (
-cst_id, 
-cst_key,
-cst_firstname,
-cst_lastname,
-cst_marital_status,
-cst_gndr,
-cst_create_date
-)
-
-SELECT
-cst_id,
-cst_key,
-TRIM(cst_firstname) AS cst_firstname,
-TRIM(cst_lastname) as cst_lastname,
-CASE WHEN UPPER(TRIM(cst_marital_status)) = 'S' THEN 'Single'
-	 WHEN UPPER(TRIM(cst_marital_status)) = 'M' THEN 'Married'
-	 ELSE 'N/A'
-END cst_marital_status, -- Altera o estado civil dos clientes para Single 'Solteiro' e Married 'Casado'. Além disso, adiciona o termo N/A no lugar do NULL.
-CASE WHEN UPPER(TRIM(cst_gndr)) = 'F' THEN 'Female'
-	 WHEN UPPER(TRIM(cst_gndr)) = 'M' THEN 'Male'
-	 ELSE 'N/A'
-END cst_gndr, -- Altera o gênero dos clientes para Female 'Feminino' e Male 'Masculino'. Além disso, adiciona o termo N/A no lugar do NULL.
-cst_create_date
-FROM (
-SELECT *,
-ROW_NUMBER() OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) AS created_last
-FROM bronze.crm_cust_info
-WHERE cst_id IS NOT NULL
-) AS t 
-WHERE created_last = 1 -- Seleciona o registro mais recente do Cliente.
-
+CREATE OR ALTER PROCEDURE silver.load_silver AS
+BEGIN
+	INSERT INTO silver.crm_cust_info (
+	cst_id, 
+	cst_key,
+	cst_firstname,
+	cst_lastname,
+	cst_marital_status,
+	cst_gndr,
+	cst_create_date
+	)
+	
+	SELECT
+	cst_id,
+	cst_key,
+	TRIM(cst_firstname) AS cst_firstname,
+	TRIM(cst_lastname) as cst_lastname,
+	CASE WHEN UPPER(TRIM(cst_marital_status)) = 'S' THEN 'Single'
+		 WHEN UPPER(TRIM(cst_marital_status)) = 'M' THEN 'Married'
+		 ELSE 'N/A'
+	END cst_marital_status, -- Altera o estado civil dos clientes para Single 'Solteiro' e Married 'Casado'. Além disso, adiciona o termo N/A no lugar do NULL.
+	CASE WHEN UPPER(TRIM(cst_gndr)) = 'F' THEN 'Female'
+		 WHEN UPPER(TRIM(cst_gndr)) = 'M' THEN 'Male'
+		 ELSE 'N/A'
+	END cst_gndr, -- Altera o gênero dos clientes para Female 'Feminino' e Male 'Masculino'. Além disso, adiciona o termo N/A no lugar do NULL.
+	cst_create_date
+	FROM (
+	SELECT *,
+	ROW_NUMBER() OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) AS created_last
+	FROM bronze.crm_cust_info
+	WHERE cst_id IS NOT NULL
+	) AS t 
+	WHERE created_last = 1 -- Seleciona o registro mais recente do Cliente.
+END
 
 -- Carregando os dados na tabela silver.crm_prd_info:
 
