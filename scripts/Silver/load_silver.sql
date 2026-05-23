@@ -125,3 +125,20 @@ END gen -- -- Altera o gênero dos clientes para Female 'Feminino' e Male 'Mascu
 FROM bronze.erp_cust_az12
 
 
+
+INSERT INTO silver.erp_loc_a101 (
+cid, 
+cntry
+)
+SELECT
+REPLACE(cid, '-', '') cid, -- Remove o '-' do 'cid' 
+CASE WHEN TRIM(cntry) = 'DE' THEN 'Germany'
+	 WHEN TRIM(cntry) IN ('US', 'USA') THEN 'United States'
+	 WHEN TRIm)cntry) IS NULL OR cntry = '' THEN 'N/A'
+	 ELSE TRIM(cntry)
+END cntry
+FROM bronze.erp_loc_a101
+
+
+
+
