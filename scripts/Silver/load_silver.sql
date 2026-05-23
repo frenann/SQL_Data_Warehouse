@@ -9,6 +9,7 @@
 
 -- Carregando os dados na tabela silver.crm_cust_info:
 
+
 INSERT INTO silver.crm_cust_info (
 cst_id, 
 cst_key,
@@ -44,6 +45,7 @@ WHERE created_last = 1 -- Seleciona o registro mais recente do Cliente.
 
 -- Carregando os dados na tabela silver.crm_prd_info:
 
+	
 INSERT INTO silver.crm_prd_info (
 prd_id, 
 cat_id,
@@ -73,6 +75,7 @@ FROM bronze.crm_prd_info
 
 -- Carregando os dados na tabela silver.crm_sales_details:
 
+	
 INSERT INTO silver.crm_sales_details (
 sls_ord_num, 
 sls_prd_key,
@@ -104,8 +107,9 @@ END sls_price
 FROM bronze.crm_sales_details
 
 
+-- Carregando os dados na tabela silver.erp_cust_az12:
 
-
+	
 INSERT INTO silver.erp_cust_az12 (
 cid,
 bdate,
@@ -124,8 +128,10 @@ CASE WHEN UPPER(TRIM(gen)) IN ('F', 'FEMALE') THEN 'Female'
 END gen -- -- Altera o gênero dos clientes para Female 'Feminino' e Male 'Masculino'. Além disso, adiciona o termo N/A no lugar do NULL.
 FROM bronze.erp_cust_az12
 
+	
+-- Carregando os dados na tabela silver.erp_loc_a101:
 
-
+	
 INSERT INTO silver.erp_loc_a101 (
 cid, 
 cntry
@@ -140,5 +146,20 @@ END cntry
 FROM bronze.erp_loc_a101
 
 
+-- Carregando os dados na tabela silver.erp_px_cat_g1v2:
+
+
+INSERT INTO (
+id, 
+cat,
+subcat,
+maintenance
+)
+SELECT
+id,
+cat,
+subcat,
+maintenance
+FROM bronze.erp_px_cat_g1v2
 
 
