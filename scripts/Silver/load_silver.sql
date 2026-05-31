@@ -184,7 +184,7 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 		PRINT '---------------------------------------------------------'
-		PRINT 'Erro ocorrido durante o carragamento da camada Silver'
+		PRINT 'Erro ocorrido durante o carregamento da camada Silver'
 		PRINT '----------------------------------------------------------'
 	END CATCH
 END
