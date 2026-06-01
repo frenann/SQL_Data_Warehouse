@@ -112,3 +112,46 @@ FROM silver.crm_prd_info PN
 LEFT JOIN silver.erp_px_cat_g1v2 PC
 ON PN.cat_id = PC.id
 WHERE prd_end_dt IS NULL
+
+
+-- Para criar a view gold.fact_sales:
+
+SELECT
+SD.sls_ord_num,
+DP.product_key,
+DC.customer_key,
+SD.sls_order_dt,
+SD.sls_ship_dt,
+SD.sls_due_dt,
+SD.sls_sales,
+SD.sls_quantity,
+SD.sls_price
+FROM silver.crm_sales_details SD
+LEFT JOIN gold.dim_product DP
+ON SD.sls_prd_key = DP.product_number 
+LEFT JOIN gold.dim_customer DC
+ON SD.sls_cust_id = DC.customer_key
+
+-- Assim é possível conectar as tabelas dimensão com a tabela fato.
+
+
+
+-- 
+-- Renomeando as colunas e criando a view gold.fact_sales:
+
+CREATE VIEW gold.fact_sales AS
+SELECT
+SD.sls_ord_num AS order_number,
+DP.product_key,
+DC.customer_key,
+SD.sls_order_dt AS order_date,
+SD.sls_ship_dt AS shipping_date,
+SD.sls_due_dt AS due_date,
+SD.sls_sales AS sales_amount,
+SD.sls_quantity AS sales_quantity,
+SD.sls_price AS sales_price
+FROM silver.crm_sales_details SD
+LEFT JOIN gold.dim_product DP
+ON SD.sls_prd_key = DP.product_number 
+LEFT JOIN gold.dim_customer DC
+ON SD.sls_cust_id = DC.customer_id
