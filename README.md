@@ -19,9 +19,9 @@ Camada responsável pela ingestão dos dados brutos.
 
 Características:
 
-Dados armazenados sem transformações.
-Preservação da estrutura original das fontes.
-Histórico completo das cargas.
+- Dados armazenados sem transformações.
+- Preservação da estrutura original das fontes.
+- Histórico completo das cargas.
 
 
 **🥈 Silver Layer**
@@ -30,10 +30,10 @@ Camada destinada ao tratamento e padronização dos dados.
 
 Transformações realizadas:
 
-Remoção de duplicidades.
-Tratamento de valores nulos.
-Padronização de formatos.
-Correção de inconsistências.
+- Remoção de duplicidades.
+- Tratamento de valores nulos.
+- Padronização de formatos.
+- Correção de inconsistências.
 
 
 **🥇 Gold Layer**
@@ -42,9 +42,9 @@ Camada analítica destinada ao consumo por ferramentas de BI.
 
 Componentes:
 
-Tabelas Dimensão
-Tabelas Fato
-Modelo Star Schema
+- Tabelas Dimensão
+- Tabelas Fato
+- Modelo Star Schema
 
 
 **Pipeline de Dados**
