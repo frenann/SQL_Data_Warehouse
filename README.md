@@ -59,9 +59,8 @@ Este projeto faz parte de uma iniciativa mais ampla de Engenharia e Análise de 
 Após a construção do Data Warehouse e da camada analítica, os dados foram utilizados em um projeto de Análise Exploratória de Dados (EDA), com o objetivo de identificar padrões, tendências e gerar insights de negócio relacionados a vendas, clientes e produtos.
 
 
-**Projeto de Análise Exploratória**
 
-➡️ [Link](https://github.com/frenann/sql_data_analytics)
+➡️ [Projeto de Análise Exploratória](https://github.com/frenann/sql_data_analytics)
 
 
 Neste projeto foram desenvolvidas análises para responder perguntas de negócio como:
