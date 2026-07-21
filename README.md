@@ -13,6 +13,7 @@ Durante o desenvolvimento foram aplicados conceitos de ETL, arquitetura Medallio
 
 O projeto foi desenvolvido seguindo a arquitetura Medallion, organizada em três camadas:
 <br>
+
 **🥉 Bronze Layer**
 
 Camada responsável pela ingestão dos dados brutos.
