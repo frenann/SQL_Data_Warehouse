@@ -61,7 +61,7 @@ Após a construção do Data Warehouse e da camada analítica, os dados foram ut
 
 **Projeto de Análise Exploratória**
 
-➡️ Link
+➡️ [Link](https://github.com/frenann/sql_data_analytics)
 
 
 Neste projeto foram desenvolvidas análises para responder perguntas de negócio como:
