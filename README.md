@@ -56,7 +56,7 @@ A documentação detalhada da pipeline, incluindo as etapas de carga, tratamento
 
 <br>
 
-**Projetos Relacionados**
+🔗**Projetos Relacionados**
 
 Este projeto faz parte de uma iniciativa mais ampla de Engenharia e Análise de Dados.
 
