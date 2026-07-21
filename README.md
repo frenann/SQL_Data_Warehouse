@@ -9,9 +9,9 @@ O projeto simula um cenário corporativo no qual dados provenientes de sistemas 
 
 Durante o desenvolvimento foram aplicados conceitos de ETL, arquitetura Medallion, modelagem dimensional e boas práticas de Data Warehousing.
 <br>
-<br>
+
 **🏗️ Arquitetura da Solução**
-<br>
+
 <br>
 
 O projeto foi desenvolvido seguindo a arquitetura Medallion, organizada em três camadas:
@@ -26,7 +26,6 @@ Características:
 - Preservação da estrutura original das fontes.
 - Histórico completo das cargas.
 <br>
-<br>
 
 **🥈 Silver Layer**
 
@@ -39,7 +38,6 @@ Transformações realizadas:
 - Padronização de formatos.
 - Correção de inconsistências.
 <br>
-<br>
 
 **🥇 Gold Layer**
 
@@ -51,7 +49,6 @@ Componentes:
 - Tabelas Fato
 - Modelo Star Schema
 <br>
-<br>
 
 🔄 Pipeline de Dados
 
@@ -59,7 +56,7 @@ A documentação detalhada da pipeline, incluindo as etapas de carga, tratamento
 
 [🔄**Pipeline de Dados**](docs/data_flow.png)
 <br>
-<br>
+
 
 **Projetos Relacionados**
 
