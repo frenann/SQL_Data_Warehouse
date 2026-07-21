@@ -4,7 +4,7 @@
 
 Este projeto tem como objetivo a construção de um Data Warehouse utilizando SQL Server, aplicando conceitos de Engenharia de Dados e Business Intelligence para transformar dados brutos em informações confiáveis e prontas para análise.
 
-O projeto simula um cenário corporativo no qual dados provenientes de sistemas ERP e CRM são integrados, tratados e modelados para apoiar a tomada de decisão estratégica.
+Nesse projeto, dados provenientes de sistemas ERP e CRM são integrados, tratados e modelados para apoiar a tomada de decisão estratégica.
 
 Durante o desenvolvimento foram aplicados conceitos de ETL, arquitetura Medallion, modelagem dimensional e boas práticas de Data Warehousing.
 <br>
@@ -44,7 +44,7 @@ Camada analítica destinada ao consumo por ferramentas de BI.
 Componentes:
 
 - Tabelas Dimensão
-- Tabelas Fato
+- Tabela Fato
 - Modelo Star Schema
 <br>
 
