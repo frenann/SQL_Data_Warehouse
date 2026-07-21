@@ -47,9 +47,9 @@ Componentes:
 - Modelo Star Schema
 
 
-**Pipeline de Dados**
+🔄**Pipeline de Dados**
 
-![Arquitetura do Projeto](docs/data_flow.png)
+(docs/data_flow.png)
 
 
 **Projetos Relacionados**
