@@ -1,6 +1,6 @@
 # sql_data_warehouse
 
-📋 ## Visão Geral
+**📋 Visão Geral**
 
 Este projeto tem como objetivo a construção de um Data Warehouse utilizando SQL Server, aplicando conceitos de Engenharia de Dados e Business Intelligence para transformar dados brutos em informações confiáveis e prontas para análise.
 
@@ -8,11 +8,12 @@ O projeto simula um cenário corporativo no qual dados provenientes de sistemas 
 
 Durante o desenvolvimento foram aplicados conceitos de ETL, arquitetura Medallion, modelagem dimensional e boas práticas de Data Warehousing.
 
-##🏗️ Arquitetura da Solução
+**🏗️ Arquitetura da Solução**
+
 
 O projeto foi desenvolvido seguindo a arquitetura Medallion, organizada em três camadas:
 
-###🥉 Bronze Layer
+**🥉 Bronze Layer**
 
 Camada responsável pela ingestão dos dados brutos.
 
@@ -22,7 +23,8 @@ Dados armazenados sem transformações.
 Preservação da estrutura original das fontes.
 Histórico completo das cargas.
 
-###🥈 Silver Layer
+
+**🥈 Silver Layer**
 
 Camada destinada ao tratamento e padronização dos dados.
 
@@ -33,7 +35,8 @@ Tratamento de valores nulos.
 Padronização de formatos.
 Correção de inconsistências.
 
-###🥇 Gold Layer
+
+**🥇 Gold Layer**
 
 Camada analítica destinada ao consumo por ferramentas de BI.
 
@@ -43,17 +46,23 @@ Tabelas Dimensão
 Tabelas Fato
 Modelo Star Schema
 
-##Pipeline de Dados
 
-##Projetos Relacionados
+**Pipeline de Dados**
+
+
+
+
+**Projetos Relacionados**
 
 Este projeto faz parte de uma iniciativa mais ampla de Engenharia e Análise de Dados.
 
 Após a construção do Data Warehouse e da camada analítica, os dados foram utilizados em um projeto de Análise Exploratória de Dados (EDA), com o objetivo de identificar padrões, tendências e gerar insights de negócio relacionados a vendas, clientes e produtos.
 
-##Projeto de Análise Exploratória
+
+**Projeto de Análise Exploratória**
 
 ➡️ Link
+
 
 Neste projeto foram desenvolvidas análises para responder perguntas de negócio como:
 
