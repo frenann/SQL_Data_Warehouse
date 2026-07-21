@@ -46,6 +46,9 @@ Componentes:
 - Tabelas Fato
 - Modelo Star Schema
 
+🔄 Pipeline de Dados
+
+A documentação detalhada da pipeline, incluindo as etapas de carga, tratamento e modelagem dos dados, pode ser acessada no link abaixo:
 
 [🔄**Pipeline de Dados**](docs/data_flow.png)
 
