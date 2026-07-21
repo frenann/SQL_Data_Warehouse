@@ -53,9 +53,9 @@ Componentes:
 A documentação detalhada da pipeline, incluindo as etapas de carga, tratamento e modelagem dos dados, pode ser acessada no link abaixo:
 
 [🔄**Pipeline de Dados**](docs/data_flow.png)
+
 <br>
-
-
+<br>
 **Projetos Relacionados**
 
 Este projeto faz parte de uma iniciativa mais ampla de Engenharia e Análise de Dados.
