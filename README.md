@@ -1,5 +1,6 @@
 # sql_data_warehouse
-
+<br>
+<br>
 **📋 Visão Geral**
 
 Este projeto tem como objetivo a construção de um Data Warehouse utilizando SQL Server, aplicando conceitos de Engenharia de Dados e Business Intelligence para transformar dados brutos em informações confiáveis e prontas para análise.
@@ -7,9 +8,11 @@ Este projeto tem como objetivo a construção de um Data Warehouse utilizando SQ
 O projeto simula um cenário corporativo no qual dados provenientes de sistemas ERP e CRM são integrados, tratados e modelados para apoiar a tomada de decisão estratégica.
 
 Durante o desenvolvimento foram aplicados conceitos de ETL, arquitetura Medallion, modelagem dimensional e boas práticas de Data Warehousing.
-
+<br>
+<br>
 **🏗️ Arquitetura da Solução**
-
+<br>
+<br>
 
 O projeto foi desenvolvido seguindo a arquitetura Medallion, organizada em três camadas:
 
@@ -22,7 +25,8 @@ Características:
 - Dados armazenados sem transformações.
 - Preservação da estrutura original das fontes.
 - Histórico completo das cargas.
-
+<br>
+<br>
 
 **🥈 Silver Layer**
 
@@ -34,7 +38,8 @@ Transformações realizadas:
 - Tratamento de valores nulos.
 - Padronização de formatos.
 - Correção de inconsistências.
-
+<br>
+<br>
 
 **🥇 Gold Layer**
 
@@ -45,15 +50,16 @@ Componentes:
 - Tabelas Dimensão
 - Tabelas Fato
 - Modelo Star Schema
+<br>
+<br>
 
 🔄 Pipeline de Dados
 
 A documentação detalhada da pipeline, incluindo as etapas de carga, tratamento e modelagem dos dados, pode ser acessada no link abaixo:
 
 [🔄**Pipeline de Dados**](docs/data_flow.png)
-
-
-
+<br>
+<br>
 
 **Projetos Relacionados**
 
