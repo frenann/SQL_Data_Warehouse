@@ -1,6 +1,6 @@
 # sql_data_warehouse
 
-##📋 Visão Geral
+📋 ## Visão Geral
 
 Este projeto tem como objetivo a construção de um Data Warehouse utilizando SQL Server, aplicando conceitos de Engenharia de Dados e Business Intelligence para transformar dados brutos em informações confiáveis e prontas para análise.
 
