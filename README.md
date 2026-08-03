@@ -22,7 +22,7 @@ Características:
 
 - Dados armazenados sem transformações.
 - Preservação da estrutura original das fontes.
-- Histórico completo das cargas.
+
 <br>
 
 **🥈 Silver Layer**
