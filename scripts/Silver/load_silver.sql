@@ -115,7 +115,7 @@ BEGIN
 			 ELSE sls_sales 
 		END sls_sales,
 		sls_quantity,
-		CASE WHEN sls_price = 0 OR sls_price IS NULL THEN sls_sales / NULLIF(sls_quantity, 0) -- Função NULLIF utilizada para que não ocorra uma divisão por 0.
+		CASE WHEN sls_price <= 0 OR sls_price IS NULL THEN sls_sales / NULLIF(sls_quantity, 0) -- Função NULLIF utilizada para que não ocorra uma divisão por 0.
 			 ELSE sls_price 
 		END sls_price
 		FROM bronze.crm_sales_details
