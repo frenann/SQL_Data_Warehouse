@@ -142,3 +142,37 @@ SELECT DISTINCT cntry
 FROM silver.erp_loc_a101
 
 
+-- Para checar se existem espaços indesejados:
+
+-- Caso a cat seja diferente da cat após a aplicação da função TRIM, isso indica que existem caracteres indesejados.
+
+SELECT cat
+FROM silver.erp_px_cat_g1v2
+WHERE cat != TRIM(cat)
+
+-- Caso a subcat seja diferente da cat após a aplicação da função TRIM, isso indica que existem caracteres indesejados.
+
+SELECT subcat
+FROM silver.erp_px_cat_g1v2
+WHERE subcat != TRIM(subcat)
+
+-- Caso a maintenance seja diferente da maintenance após a aplicação da função TRIM, isso indica que existem caracteres indesejados.
+
+SELECT maintenance
+FROM silver.erp_px_cat_g1v2
+WHERE maintenance != TRIM(maintenance)
+
+
+-- Para checar a consistência dos valores de categorias, subcat e maintenance:
+
+SELECT DISTINCT cat
+FROM silver.erp_px_cat_g1v2
+
+SELECT DISTINCT subcat
+FROM silver.erp_px_cat_g1v2
+
+SELECT DISTINCT maintenance
+FROM silver.erp_px_cat_g1v2
+
+
+
