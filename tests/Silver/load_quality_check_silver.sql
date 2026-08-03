@@ -123,4 +123,22 @@ OR sls_sales <= 0 OR sls_quantity <= 0 OR sls_price <= 0
 ORDER BY sls_sales, sls_quantity, sls_price
 
 
+-- Para checar se existem valores incorretos nas colunas de data:
+
+SELECT bdate
+FROM silver.erp_cust_az12
+WHERE bdate > GETDATE() OR bdate < '1900-01-01'
+
+
+-- Para checar a consistência dos valores de gênero:
+
+SELECT DISTINCT gen
+FROM silver.erp_cust_az12
+
+
+-- Para checar a consistência dos países:
+
+SELECT DISTINCT cntry
+FROM silver.erp_loc_a101
+
 
