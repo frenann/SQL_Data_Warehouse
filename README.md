@@ -6,7 +6,7 @@ Este projeto tem como objetivo a construção de um Data Warehouse utilizando SQ
 
 Nesse projeto, dados provenientes de sistemas ERP e CRM são integrados, tratados e modelados para apoiar a tomada de decisão estratégica.
 
-Durante o desenvolvimento foram aplicados conceitos de ETL, arquitetura Medallion, modelagem dimensional e boas práticas de Data Warehousing.
+Durante o desenvolvimento foram aplicados conceitos de ETL, arquitetura Medallion e modelagem dimensional.
 <br>
 
 **🏗️ Arquitetura da Solução**
