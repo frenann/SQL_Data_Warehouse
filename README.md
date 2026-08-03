@@ -67,9 +67,3 @@ Após a construção do Data Warehouse e da camada analítica, os dados foram ut
 ➡️ [Projeto de Análise Exploratória](https://github.com/frenann/sql_data_analytics)
 
 
-Neste projeto foram desenvolvidas análises para responder perguntas de negócio como:
-
-
-
-
-O repositório atual é responsável pela construção da infraestrutura analítica e modelagem dos dados, enquanto o projeto de EDA demonstra a aplicação prática dessa estrutura para geração de conhecimento e suporte à decisão.
